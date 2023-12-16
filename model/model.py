@@ -10,19 +10,19 @@ class Main:
     def answer(self, msg):
         message_input = msg
         self.messages.append(HumanMessage(content=message_input))
-        message_response = chat(self.messages).content
+        message_response = self.chat(self.messages).content
         print("Ответ: ", message_response)
 
         self.messages.append(AIMessage(content=message_response))
         document_input = "Из какого нормативно-правового акта эта инфомация? Напиши только название"
         self.messages.append(HumanMessage(content=document_input))
-        document_response = chat(self.messages).content
+        document_response = self.chat(self.messages).content
         print("НПА: ", document_response)
 
         self.messages.append(AIMessage(content=document_response))
         url_input = f"Скинь ссылку на этот нормативно-правовой акт. Выбери самый новый документ, который можешь найти. Напиши только ссылку"
         self.messages.append(HumanMessage(content=url_input))
-        url_response = chat(self.messages).content
+        url_response = self.chat(self.messages).content
         print("Ссылка: ", url_response)
 
 if __name__ == '__main__':
