@@ -10,6 +10,8 @@ from aiogram.types import Message
 from aiogram.utils.markdown import hbold
 import asyncio
 
+from bot_token import TOKEN
+
 import sys
 sys.path.append('../hackaton-llm')
 
@@ -18,7 +20,6 @@ from model.API_KEY import API_KEY
 
 
 # Bot token can be obtained via https://t.me/BotFather
-TOKEN = "6897323696:AAHiuPpoxKUgclILD_CoKx0pwPaFCaN56GA"
 bot = Bot(token=TOKEN)
 
 # All handlers should be attached to the Router (or Dispatcher)

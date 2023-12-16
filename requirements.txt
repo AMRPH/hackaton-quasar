@@ -1,4 +1,4 @@
 gigachat==0.1.9
 gigachain==0.0.332
-gigachain-cli==0.0.19
 langchain==0.0.350
+Eel==0.16.0

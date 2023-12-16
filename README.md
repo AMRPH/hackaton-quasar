@@ -1,13 +1,24 @@
 # Quasar
 MVP онлайн консультанта для ответов на вопросы по проведению закупочных процедур, что будет полезно для ускорения процесса проведения закупочных процедур. 
-
 ### Стэк:
 - Langchaim
 - Gigachain
 - GigaChat
-
-
 ### Как использовать
-    pip install -r requirements.txt
-    gigachain install-rus-certs
- 
+
+	pip install -r requirements.txt	
+
+Для *локального* использование запускается файл main.py
+
+	python3 main.py
+
+Запускается графический интерфейс:
+
+![](./img/screenshot.png)
+
+
+### Как запустить бота
+
+    pip install aiogram
+
+В файле API_BOT_KEY.py вставить свой API-ключ
