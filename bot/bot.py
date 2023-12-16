@@ -11,7 +11,7 @@ from aiogram.utils.markdown import hbold
 import asyncio
 
 import sys
-sys.path.append('../hackaton-llm')
+sys.path.append('../hackaton-quasar')
 
 from model.model import Quasar
 from model.API_KEY import API_KEY
