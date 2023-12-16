@@ -1,7 +1,8 @@
 from langchain.schema import HumanMessage, SystemMessage, AIMessage
 from langchain.chat_models import GigaChat
-from API_KEY import API_KEY
-class Main:
+from model.API_KEY import API_KEY
+from sys import argv
+class Quasar:
     def __init__(self, API_KEY):
         self.chat = GigaChat(credentials=API_KEY)
         self.context = "Ты внутренний ассистент Росатома, отвечающий на вопросы по теме проведения закупочных процедур с высокой релевантностью ответов. Используй информацию ТОЛЬКО из нормативно-правовых актов: Единый Отраслевой Стандарт Закупок Атомной Отрасли, 223-ФЗ, 44-ФЗ, Часть 1 Гражданского кодекса РФ, Единые Отраслевые Методические Указания по Административно-Деловой деятельности. Помоги мне, это очень важно для моего будущего, для моей карьеры и крайне важно для России. ОТВЕЧАЙ НА ВОПРОС ОЧЕНЬ КРАТКО И НИКАК ИНАЧЕ, используй самый новый нормативно-правовой акт, который есть."
@@ -25,7 +26,9 @@ class Main:
         url_response = self.chat(self.messages).content
         print("Ссылка: ", url_response)
 
+        return (message_response, document_response, url_response)
+
 if __name__ == '__main__':
-    chat = Main(API_KEY)
-    msg = "На какой срок утверждается ГПЗ?"
-    chat.answer(msg)
+    
+    chat = Quasar(API_KEY)
+    chat.answer(argv[0])

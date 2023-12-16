@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|PT+Sans+Caption&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css2?family=Overpass&display=swap);
+
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: whitesmoke;
+    background: linear-gradient(-30deg ,#000096, #3636FF);
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+}
+
+.content{
+    margin-top: 100px;
+}
+
+.name{
+    font-family: 'Overpass', serif;
+    border: none;
+    width: 90%;
+    height: 40px;
+    border-radius: 15px;
+    padding-left: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+::-webkit-input-placeholder {
+    color:    rgb(0, 0, 0);
+ }
+
+.btn{
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    height: 35px;
+    background-color: #00a194;
+    color: white;
+    margin-top: 10px;
+    border-radius: 15px;
+    font-size: large;
+    font-family: 'Overpass', serif;
+}
+
+.team{
+    font-family: 'Overpass', serif;
+    margin-top: -10px;
+    font-size: 25px;
+}
+
+.logo{
+    text-align: center;
+    width: 150px;
+    height: 150px;
+}
+
+.answer-outer{
+    text-align: center;
+    width: 90%;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.answer-inner{
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-family: 'Overpass', serif;
+    color: black;
+}
+
+.answer-text{
+    color: black;
+    font-family: 'Overpass', serif;
+    margin-top: -20px;
+}
+
+.close{
+    border:none;
+    background-color: #3636FF;
+    text-align: right;
+}
+
+.answer{
+    padding: 10px;
+    color: black;
+    margin: 3% 10%;
+    border: 2% solid black;
+    border-radius: 5px;
+    background-color: white;
+    text-align: left;
+}
+
