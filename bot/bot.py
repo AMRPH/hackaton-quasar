@@ -1,16 +1,14 @@
 import asyncio
 import logging
 import sys
-from os import getenv
 
+from decouple import config
 from aiogram import Bot, Dispatcher, Router, types
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 from aiogram.utils.markdown import hbold
 import asyncio
-
-from bot_token import TOKEN
 
 import sys
 sys.path.append('../hackaton-llm')
@@ -19,10 +17,8 @@ from model.model import Quasar
 from model.API_KEY import API_KEY
 
 
-# Bot token can be obtained via https://t.me/BotFather
-bot = Bot(token=TOKEN)
+bot = Bot(token=config('TOKEN'), parse_mode=ParseMode.HTML)
 
-# All handlers should be attached to the Router (or Dispatcher)
 dp = Dispatcher()
 
 
@@ -36,13 +32,10 @@ async def QuasarAnswer(message: types.Message) -> None:
     await bot.send_message(message.from_user.id, 'Ожидайте, ответ обрабатывается...')
     quasar = Quasar(API_KEY=API_KEY)
     response = quasar.answer(message.text)
-    await message.answer(f'<b>Ответ:</b> {response[0]}\n<b>НПА:</b> {response[1]}\n<b>Ссылка:</b> {response[2]}\n*Ссылка может быть не достоверной', parse_mode=ParseMode.HTML)
+    await message.answer(f'<b>Ответ:</b> {response[0]}\n<b>НПА:</b> {response[1]}\n<b>Ссылка:</b> {response[2]}\n<i>*Ссылка может быть не достоверной</i>', parse_mode=ParseMode.HTML)
 
 
 async def main() -> None:
-    # Initialize Bot instance with a default parse mode which will be passed to all API calls
-    bot = Bot(TOKEN, parse_mode=ParseMode.HTML)
-    # And the run events dispatching
     await dp.start_polling(bot)
 
 

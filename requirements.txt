@@ -2,3 +2,4 @@ gigachat==0.1.9
 gigachain==0.0.332
 langchain==0.0.350
 Eel==0.16.0
+decouple==3.8
