@@ -29,7 +29,7 @@ python3 main.py
 pip install aiogram
 ```
 
-Вставить свой API KEY в файл API_BOT_KEY.py
+Вставить свой BOT_TOKEN в файл .env
 
 После этого запустить файл bot.py:
 ```
