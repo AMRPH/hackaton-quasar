@@ -26,6 +26,12 @@ class Quasar:
         url_response = self.chat(self.messages).content
         print("Ссылка: ", url_response)
 
+        if (len(document_response.split(" ")) > 25):
+            document_response = "Документ не найден"
+
+        if (len(url_response.split(" ")) > 2):
+            url_response = "Ссылка не найдена"
+
         return (message_response, document_response, url_response)
 
 if __name__ == '__main__':
