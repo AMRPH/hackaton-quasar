@@ -15,13 +15,13 @@ class Quasar:
         print("Ответ: ", message_response)
 
         self.messages.append(AIMessage(content=message_response))
-        document_input = "Из какого нормативно-правового акта эта инфомация? Напиши только название"
+        document_input = "Из какого нормативно-правового акта эта инфомация? Напиши ТОЛЬКО название нормативно-правового акта."
         self.messages.append(HumanMessage(content=document_input))
         document_response = self.chat(self.messages).content
         print("НПА: ", document_response)
 
         self.messages.append(AIMessage(content=document_response))
-        url_input = f"Скинь ссылку на этот нормативно-правовой акт. Выбери самый новый документ, который можешь найти. Напиши только ссылку"
+        url_input = f"Скинь ссылку на этот нормативно-правовой акт. Выбери самый новый документ, который можешь найти. Напиши ТОЛЬКО ссылку на нормативно-правовой акт."
         self.messages.append(HumanMessage(content=url_input))
         url_response = self.chat(self.messages).content
         print("Ссылка: ", url_response)
@@ -29,7 +29,7 @@ class Quasar:
         if (len(document_response.split(" ")) > 25):
             document_response = "Документ не найден"
 
-        if (len(url_response.split(" ")) > 2):
+        if (len(url_response.split(" ")) > 5):
             url_response = "Ссылка не найдена"
 
         return (message_response, document_response, url_response)
