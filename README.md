@@ -22,6 +22,8 @@ python3 main.py
 
 ![](./img/screenshot.png)
 
+### Для тестирования teltgram бота
+Перейдите по ссылке https://t.me/QuasarAstrumBot
 
 ### Как запустить telegram бота
 Для запуска telegram бота приложения необходимо установить зависимости:
