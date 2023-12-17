@@ -9,6 +9,7 @@ class Quasar:
         self.messages = [SystemMessage(content=self.context)]
 
     def answer(self, msg):
+        print("Вопрос: ", msg)
         message_input = msg
         self.messages.append(HumanMessage(content=message_input))
         message_response = self.chat(self.messages).content
@@ -19,6 +20,7 @@ class Quasar:
         self.messages.append(HumanMessage(content=document_input))
         document_response = self.chat(self.messages).content
         print("НПА: ", document_response)
+        print("-"*50)
 
         url_response = ""
         
