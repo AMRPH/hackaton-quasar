@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>РосАтом</title>
+    <script src="https://unpkg.com/typeit@8.8.0/dist/index.umd.js"></script>
     <script type="text/javascript" src="/eel.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
+    <div class = "header">
+        <div class="div_for_atom">
+            <img src="./temp/favicon.ico" class="logo"><p id = "Atom"><b>РОС</b>АТОМ</p>
+        </div>
+        <div class="atomic">
+            <img src="./temp/atomic-hack.png" class="atomic-hack">
+        </div>
+        <div class = "astrum">
+            <p class="team">Astrum</p>
+        </div>
+    </div>
+
     <div align="center" class="content">
-        <img src="favicon.ico" class="logo">
-        <p class="team">Team Astrum</p>
+        <h1>Quasar</h1>
+        <div class="search">
         <input type="text" id="name" class="name" placeholder="Введите запрос">
-        <button id="send" class="btn" onclick="subm()">ОТПРАВИТЬ ➤</button>
+        <button id="send" class="btn" onclick=subm()><img class="pas" src="./temp/right-arrow (1).png"></button>
+        </div>
         <div id="result">
-            <div id="answer"></div>
-            <div id="legal_act"></div>
-            <div id="link_ans"></div>
+            <div id="answer" class="visible"></div>
+            <div id="legal_act" class="visible"></div>
+            <div id="link_ans" class="visible"><a id = "llink"></a></div>
         </div>
     </div>
 
     <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
