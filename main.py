@@ -9,4 +9,4 @@ def submit_ans(text):
     model = Quasar(API_KEY)
     return model.answer(text)
 
-eel.start("./interface/main.html", size = (900,600))
+eel.start("./ui/main.html", size = (900,600))
