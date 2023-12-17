@@ -28,16 +28,17 @@ async function subm(){
     link_ans.classList.remove("invisible");
     link_ans.classList.add("visible");
     link_ans.classList.add("answer");
-    link_ans.innerHTML = 'Ссылка: <a id = "llink" target="_blank"></a>'
-    if (result[2] != "Ссылка не найдена"){  
-        document.getElementById("llink").setAttribute('href', result[2]);
-        document.getElementById("llink").setAttribute('target', '_blank');
+    urls = result[2].split(' ');
+    link_ans.innerHTML = 'Ссылка: ';
+
+    for (let i = 0; i < urls.length; i++) {
+        link_ans.innerHTML += '<a class = "llink" target="_blank" href="'+urls[i]+'">'+urls[i]+'</a></br>'
     }
-    else{
-        document.getElementById("llink").setAttribute('href', '#');
-        document.getElementById("llink").setAttribute('target', '_self');
+    
+    if (result[2] == "Ссылка не найдена"){
+        link_ans.innerHTML ='Ссылка: Ссылка не найдена';
     }
-    document.getElementById("llink").innerHTML = result[2]
+
 
 
 
