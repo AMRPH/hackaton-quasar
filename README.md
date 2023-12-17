@@ -22,13 +22,14 @@ python3 main.py
 
 ![](./img/screenshot.png)
 
-### Для тестирования teltgram бота
+### Для тестирования telesgram бота
 Перейдите по ссылке https://t.me/QuasarAstrumBot
 
 ### Как запустить telegram бота
 Для запуска telegram бота приложения необходимо установить зависимости:
 ```
 pip install aiogram
+pip install python-decouple
 ```
 
 Вставить свой API KEY в файл .env
