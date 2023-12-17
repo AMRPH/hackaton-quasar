@@ -10,6 +10,13 @@
     transition: 1s;
     opacity: 1;
 }
+a{
+    text-decoration: none;
+    color: blue;
+}
+a:hover{
+    text-decoration: underline;
+}
 h1{
     font-size: 50px;
     font-family: Oswald;
@@ -19,7 +26,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: whitesmoke;
-    background: linear-gradient(-30deg ,#000000, #292929);
+    background: linear-gradient(-30deg ,#010246, #00020a);
     margin: 0;
     padding: 0;
     background-attachment: fixed;
@@ -29,10 +36,10 @@ body{
 }
 .header{
     display: flex;
-    vertical-align: text-bottom;
-    justify-content: space-around;
+    justify-content:space-around;
     margin-top: 30px;
     flex-direction: row;
+    margin-right: 60px;
 }
 .div_for_atom{
     padding-top: 32px;
@@ -57,8 +64,8 @@ body{
 
 P#Atom{
     font-family: Oswald;
-    margin-top: 25px;
-    font-size:medium;
+    margin-top: 12px;
+    font-size:30px;
     
 }
 
@@ -82,7 +89,7 @@ P#Atom{
 .name{
     font-family: 'Overpass', serif;
     border: none;
-    width: 90%;
+    width: 80%;
     height: 40px;
     border-radius: 15px;
     padding-left: 10px;
@@ -99,9 +106,11 @@ P#Atom{
 .btn{
     cursor: pointer;
     height: 35px;
-    margin-top: 5px;
-    right: 65px;
-    position: relative; 
+    right: -5px;
+    top: -15px;
+    position: relative;
+    background-color: #0D0039;
+    
 }
 input { 
     margin: 0px; 
@@ -113,18 +122,12 @@ input {
 } 
   
 button { 
-    position: absolute; 
     top: 0; 
     z-index: 2; 
     border: none; 
-    top: 11px; 
+    padding-bottom: 10px;
     cursor: pointer; 
-    color: #ffffff;
-
 }
-
-
-
 .answer-outer{
     text-align: center;
     width: 90%;
@@ -156,7 +159,7 @@ button {
     padding: 10px;
     color: black;
     margin: 3% 10%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Overpass', Helvetica, sans-serif;
     border: 2% solid black;
     border-radius: 5px;
     background-color: white;
