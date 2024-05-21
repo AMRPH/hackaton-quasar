@@ -22,7 +22,7 @@ python3 main.py
 
 ![](./img/screenshot.png)
 
-### Для тестирования telesgram бота
+### Для тестирования telegram бота
 Перейдите по ссылке https://t.me/QuasarAstrumBot
 
 ### Как запустить telegram бота
